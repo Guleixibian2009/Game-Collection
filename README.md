@@ -8,12 +8,13 @@
 
 下面这些小游戏，全部来自[GitHub](https://github.com/)！仓库本身没有`LICENSE`，全部遵循游戏仓库本身的`LICENSE`。  
 
-游戏语言主要为`Python`，`C/C++`，`Java`。如果你没有编译器，有些游戏也带有网页版/网页文件版本。  
+游戏语言主要为`Python`，`C/C++`，`Javascript`。如果你没有编译器，有些游戏也带有网页版/网页文件版本。  
 
 ## 最终游戏列表
 
 1. [VacantHusky/2048GameAutoMovePython](https://github.com/VacantHusky/2048GameAutoMovePython/)  
 2. [muan/emoji-minesweeper](https://github.com/muan/emoji-minesweeper/)  
+3. [propjockey/css-sweeper](https://github.com/propjockey/css-sweeper)  
 
 ## 郑重声明
 
