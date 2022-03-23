@@ -10,6 +10,8 @@
 
 游戏语言主要为`Python`，`C/C++`，`Javascript`。如果你没有编译器，有些游戏也带有网页版/网页文件版本。  
 
+当然，这里给大家一个推荐的仓库，有更多游戏的集合，在<https://github.com/leereilly/gameshttps://github.com/leereilly/games> 来查看！
+
 ## 最终游戏列表
 
 1. [VacantHusky/2048GameAutoMovePython](https://github.com/VacantHusky/2048GameAutoMovePython/)  
@@ -29,6 +31,8 @@
 8. [arturkot/the-house-game](https://github.com/arturkot/the-house-game)  
 
 9. [BKcore-HexGL](https://github.com/BKcore/HexGL)  
+
+10. [kenrick95-c4](https://github.com/kenrick95/c4)  
 
 ## 郑重声明
 
