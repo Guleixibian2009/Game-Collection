@@ -20,9 +20,18 @@
 
 4. [nbarkhina/MarioHTML](https://github.com/nbarkhina/MarioHTML)  
 
+5. [LoveDaisy/tetris_game](https://github.com/LoveDaisy/tetris_game)  
+
+6. [mumuy/pacman](https://github.com/mumuy/pacman)  
+
+7. [mooniiDev/rock-paper-scissors-game](https://github.com/mooniiDev/rock-paper-scissors-game)  
+
+8. [arturkot/the-house-game](https://github.com/arturkot/the-house-game)  
+
+9. [BKcore-HexGL](https://github.com/BKcore/HexGL)  
+
 ## 郑重声明
 
 如有进行游戏期间对电脑或其他造成损伤，作者**不负任何责任**。游戏在加入后**不会再进行新版本的拉取**，如需最新版，请*访问上述链接*。
 
 以上游戏，如有侵权，请联系作者删除，谢谢配合！
-

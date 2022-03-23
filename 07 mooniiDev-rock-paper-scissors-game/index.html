@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wand Bow Mace</title>
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/duotone.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="gameHeader">
+      <h1>
+        <span class="purple-color">WAND</span>&nbsp;
+        <span class="green-color">BOW</span>&nbsp;
+        <span class="red-color">MACE</span>
+      </h1>
+      <p>3 Weapons ︱ 5 Lives ︱ 2 Destinies</p>
+      <p>
+        <span class="purple-color">Wand</span> beats <span class="red-color">Mace</span> ︱
+        <span class="red-color">Mace</span> beats <span class="green-color">Bow</span> ︱
+        <span class="green-color">Bow</span> beats <span class="purple-color">Wand</span>
+      </p>
+    </header>
+
+    <main class="main-content">
+      <div class="weapons-area">
+        <button class="wand-button weapon-button">
+          <i class="fad fa-wand-magic weapon-icon wand-icon"></i>
+        </button>
+        <button class="bow-button weapon-button">
+          <i class="fad fa-bow-arrow weapon-icon bow-icon"></i>
+        </button>
+        <button class="mace-button weapon-button">
+          <i class="fad fa-mace weapon-icon mace-icon"></i>
+        </button>
+      </div>
+
+      <img src="images/separator.jpg" alt="Separator" class="separator">
+
+      <div class="game-output">
+        <div class="computer-play-div grey-border centering">
+          <p class="computer-title">Enemy's Weapon</p>
+          <i class="computer-icon fad fa-skull"></i>
+        </div>
+        <div class="game-results">
+          <p class="round">Round: 0</p>
+          <p class="lives">Your Lives: 5 ︱ Enemy's Lives: 5</p>
+          <p class="combat-text">Combat Area: Empty</p>
+        </div>
+      </div>
+
+      <div class="game-end-div">
+        <p class="game-end-text"></p>
+        <button class="play-again">Fight Again!</button>
+      </div>
+    </main>
+
+    <footer class="copyright">
+      <p>☽ Crafted by mooniiDev ☾</p>
+    </footer>
+    <script type="text/javascript" src="scripts.js"></script>
+  </body>
+
+</html>

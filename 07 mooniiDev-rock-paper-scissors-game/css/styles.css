@@ -1,0 +1,211 @@
+body {
+  font-family: 'Macondo Swash Caps', cursive;
+  color: #5e5e5e;
+}
+
+.gameHeader {
+  text-align: center;
+  font-size: 25px;
+  color: #5e5e5e;
+}
+.purple-color {
+  color: #8070ac;
+}
+.green-color {
+  color: #62b49c;
+}
+.red-color {
+  color: #b96b78;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.weapons-area {
+ display: flex;
+ justify-content: space-evenly;
+ border: 4px solid #5e5e5e;
+ border-radius: 5px;
+}
+.weapon-button {
+  background-color: transparent;
+  border: none;
+}
+.weapon-button:focus,
+.play-again:focus {
+  outline: none;
+}
+.weapon-icon {
+  margin: 50px 0;
+  color: #5e5e5e;
+  font-size: 70px;
+  transition: all .3s;
+}
+.weapon-icon:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.1);
+  transition: all .3s;
+}
+.wand-icon:hover {
+  color: #8070ac !important;
+}
+.bow-icon:hover {
+  color: #62b49c !important;
+}
+.mace-icon:hover {
+  color: #b96b78 !important;
+}
+.disabled-button .weapon-icon {
+  cursor: default;
+  transform: none;
+}
+.disabled-button .weapon-icon {
+  cursor: default;
+  transform: none;
+}
+
+.separator {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.game-output {
+  display: flex;
+  border: 4px solid #5e5e5e;
+  border-radius: 5px;
+  transition: all .2s linear;
+}
+.computer-play-div {
+  transition: all .2s linear;
+}
+.computer-title {
+  margin: 19px 0 -30px 19px;
+  font-size: 19px;
+}
+.computer-icon {
+  margin: 50px 50px 40px 50px;
+  color: #5e5e5e;
+  font-size: 70px;
+}
+.game-results {
+  margin: 0 20px;
+  font-size: 19px;
+}
+
+/* Computer Div Borders for Javascript */
+.purple-border {
+  border-right: 4px solid #8070ac;
+}
+.green-border {
+  border-right: 4px solid #62b49c;
+}
+.red-border {
+  border-right: 4px solid #b96b78;
+}
+.grey-border {
+  border-right: 4px solid #5e5e5e;
+}
+
+/* Game End */
+.opacity {
+  opacity: 0.5;
+}
+.game-end-div {
+  text-align: center;
+}
+.game-end-text {
+  font-size: 50px;
+}
+.play-again {
+  visibility: hidden;
+  margin-bottom: 60px;
+  padding: 20px;
+  font-size: 25px;
+  color: #5e5e5e;
+  border: 4px solid #5e5e5e;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all .3s;
+  cursor: pointer;
+}
+.play-again:hover {
+  background-color: #5e5e5e;
+  color: #fff;
+}
+
+/* Footer */
+.copyright {
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 4px solid #5e5e5e;
+  text-align: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 750px) {
+  .gameHeader {
+    font-size: 17px;
+  }
+	.main-content {
+    margin: 30px;
+    text-align: center;
+  }
+  .separator {
+    font-size: 15px;
+  }
+  .weapon-icon,
+  .computer-icon {
+    font-size: 60px;
+    margin: 30px;
+  }
+  .weapon-icon {
+    margin: 30px 0;
+  }
+  .game-output {
+    flex-direction: column;
+  }
+  .centering {
+    text-align: center;
+  }
+  .computer-title {
+    margin: 10px auto;
+    font-size: 17px;
+  }
+  .computer-icon {
+    margin-top: 10px;
+  }
+  .purple-border {
+    border-right: none;
+    border-bottom: 4px solid #8070ac;
+  }
+  .green-border {
+    border-right: none;
+    border-bottom: 4px solid #62b49c;
+  }
+  .red-border {
+    border-right: none;
+    border-bottom: 4px solid #b96b78;
+  }
+  .grey-border {
+    border-right: none;
+    border-bottom: 4px solid #5e5e5e;
+  }
+  .game-results {
+    font-size: 17px;
+  }
+  .game-end-text {
+    font-size: 35px;
+  }
+  .play-again {
+    font-size: 17px;
+  }
+}
