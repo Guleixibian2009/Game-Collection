@@ -10,7 +10,7 @@
 
 游戏语言主要为`Python`，`C/C++`，`Javascript`。如果你没有编译器，有些游戏也带有网页版/网页文件版本。  
 
-当然，这里给大家一个推荐的仓库，有更多游戏的集合，在<https://github.com/leereilly/gameshttps://github.com/leereilly/games> 来查看！
+当然，这里给大家一个推荐的仓库，有更多游戏的集合，在<https://github.com/michelpereira/awesome-open-source-games> 来查看！
 
 ## 最终游戏列表
 
