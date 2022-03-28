@@ -1,0 +1,6 @@
+assets/*
+dist/*
+node_modules/*
+public/*
+.log
+package.json

@@ -36,6 +36,14 @@
 
 11. [Nurgak/Cube-engine](https://github.com/Nurgak/Cube-engine)  
 
+12. [basicallydan/skifree.js](https://github.com/basicallydan/skifree.js)  
+
+13. [pmndrs/racing-game](https://github.com/pmndrs/racing-game)  
+
+14. [michaelbromley/css-space-shooter](https://github.com/michaelbromley/css-space-shooter)  
+
+15. [Ukioo/3D-aircraft](https://github.com/ukioo/3d-aircraft)  
+
 ## 郑重声明
 
 如有进行游戏期间对电脑或其他造成损伤，作者**不负任何责任**。游戏在加入后**不会再进行新版本的拉取**，如需最新版，请*访问上述链接*。
