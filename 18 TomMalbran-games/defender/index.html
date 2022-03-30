@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Defender</title>
+    <link rel="stylesheet" href="design/design.css" />
+    <link rel="stylesheet" href="design/sidebar.css" />
+    <link rel="stylesheet" href="design/towers.css" />
+    <link rel="stylesheet" href="design/mobs.css" />
+    <script type="module" src="source/Main.js"></script>
+</head>
+
+<body>
+    <div id="container" class="mainScreen">
+        <h1>Defender</h1>
+
+        <div class="overlay"></div>
+        <div class="main">
+            <button class="sell-all nav-button" data-action="sellAll">Sell All</button>
+
+            <div class="board">
+                <div class="players">
+                    <div class="walls"></div>
+                    <div class="path"></div>
+                    <div class="blood"></div>
+                    <div class="defenses"></div>
+                    <div class="monsters"></div>
+                    <div class="bullets"></div>
+                    <div class="alerts"></div>
+                </div>
+                <div class="building" data-type="build">
+                    <div class="tower-range"></div>
+                    <div class="tower-placeholder2 green"></div>
+                    <div class="tower-placeholder3 green"></div>
+                </div>
+                <div class="blocking">Blocking</div>
+            </div>
+
+            <div class="main-menu menu">
+                <h2>Defender</h2>
+                <div class="content">
+                    <p>Select an option</p>
+                    <button class="menu-button" data-action="selectMap"><u>N</u>ew Game</button>
+                    <button class="menu-button" data-action="lastMap"><u>L</u>ast Map</button>
+                    <button class="menu-button" data-action="controls"><u>C</u>ontrols</button>
+                </div>
+            </div>
+
+            <div class="map-menu menu">
+                <h2>New Game</h2>
+                <div class="content">
+                    <p>Select a Map</p>
+                    <div class="maps"></div>
+                    <button class="menu-button" data-action="mainScreen">Back</button>
+                    <div class="total-score"></div>
+                </div>
+            </div>
+
+            <div class="level-menu menu">
+                <h2>Difficulty</h2>
+                <div class="content">
+                    <p>Select the level difficulty</p>
+                    <button class="menu-button" data-action="newGame" data-data="0"><u>E</u>asy</button>
+                    <button class="menu-button" data-action="newGame" data-data="1"><u>N</u>ormal</button>
+                    <button class="menu-button" data-action="newGame" data-data="2"><u>H</u>ard</button>
+                    <button class="menu-button" data-action="selectMap"><u>B</u>ack</button>
+                </div>
+            </div>
+
+            <div class="pause-menu menu">
+                <h2>Pause</h2>
+                <div class="content">
+                    <p>Select an option</p>
+                    <button class="menu-button" data-action="pause"><u>C</u>ontinue</button>
+                    <button class="menu-button" data-action="restart"><u>R</u>estart</button>
+                    <button class="menu-button" data-action="endGame"><u>Q</u>uit</button>
+                </div>
+            </div>
+
+            <div class="gameover-menu menu">
+                <h2>Game Over</h2>
+                <div class="content">
+                    <dl class="final-score"></dl>
+                    <button class="menu-button" data-action="mainScreen"><u>N</u>ew Game</button>
+                </div>
+            </div>
+
+            <div class="controls-menu menu">
+                <h2>Game Controls</h2>
+                <div class="content">
+                    <dl>
+                        <dt>P</dt><dd>Pause game</dd>
+                        <dt>M</dt><dd>Toggle sound on/off</dd>
+                        <dt>N</dt><dd>Send next/first wave</dd>
+                        <dt>&lt;Numbers 0-9&gt;</dt><dd>Select a tower to build</dd>
+                        <dt>&lt;Arrows&gt;</dt><dd>Place tower</dd>
+                        <dt>B</dt><dd>Build tower</dd>
+                        <dt>&lt;Home&gt;</dt><dd>Select first built tower</dd>
+                        <dt>&lt;End&gt;</dt><dd>Select last built tower</dd>
+                        <dt>Z/X</dt><dd>Select previows/next build tower</dd>
+                        <dt>&lt;PageUp&gt;</dt><dd>Select previows fifth tower</dd>
+                        <dt>&lt;PageDown&gt;</dt><dd>Select next fifth tower</dd>
+                        <dt>S</dt><dd>Sell selected tower</dd>
+                        <dt>A</dt><dd>Sell all towers</dd>
+                        <dt>U</dt><dd>Upgrade selected tower</dd>
+                        <dt>L</dt><dd>Lock selected tower</dd>
+                        <dt>F</dt><dd>Fire selected tower</dd>
+                        <dt>&lt;Esc&gt;</dt><dd>End selection</dd>
+                    </dl>
+                    <button class="menu-button" data-action="mainScreen">Back</button>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class="sidebar">
+            <section class="scores-panel">
+                <div class="gold-score">Gold: 0</div>
+                <div class="lives-score">Lives: 0</div>
+                <div class="time-score">Time: 0</div>
+                <div class="score-score">Score: 0</div>
+            </section>
+
+            <section class="towers-panel">
+                <h2>Towers</h2>
+                <div class="panel-content">
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="shoot-body"></div>
+                                <div class="shoot-tank"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Shoot"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="fast-body"></div>
+                                <div class="fast-tank"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Fast"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="missile-base"></div>
+                                <div class="missile-tail"></div>
+                                <div class="missile-body"></div>
+                                <div class="missile-head"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Missile"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="air-missile1"></div>
+                                <div class="air-missile2"></div>
+                                <div class="air-missile3"></div>
+                                <div class="air-missile4"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="AntiAir"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="frost-body"></div>
+                                <div class="frost-tank"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Frost"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="earth-body"></div>
+                                <div class="earth-tower"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Earthquake"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="ink-base"></div>
+                                <div class="ink-tank"></div>
+                                <div class="ink-body"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Ink"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-corner"></div>
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="snap-tl"></div>
+                                <div class="snap-tr"></div>
+                                <div class="snap-bl"></div>
+                                <div class="snap-br"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Snap"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="tower-corner"></div>
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-scale">
+                                <div class="tower-rotate3">
+                                    <div class="laser-tank"></div>
+                                    <div class="laser-head"></div>
+                                    <div class="laser-body"></div>
+                                    <div class="laser-tail"></div>
+                                </div>
+                            </div>
+                            <div class="tower-loader"></div>
+                            <div class="tower-lock"></div>
+                        </div>
+                        <div class="tower-build" data-type="Laser"></div>
+                    </div>
+
+                    <div class="tower">
+                        <div class="tower-content">
+                            <div class="cornerLeft"></div>
+                            <div class="cornerRight"></div>
+                            <div class="tower-levels">
+                                <div class="type1"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="tower-number">1</div>
+                            <div class="tower-rotate2">
+                                <div class="boost-z"></div>
+                                <div class="boost-x"></div>
+                                <div class="boost-y"></div>
+                            </div>
+                            <div class="tower-loader"></div>
+                        </div>
+                        <div class="tower-build" data-type="Boost"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-panel"></section>
+
+            <section class="sidebar-buttons">
+                <button class="pause-button nav-button" data-action="pause"><u>P</u>ause</button>
+                <button class="audio-button nav-button mute" data-action="mute"><u>M</u>ute</button>
+            </section>
+        </aside>
+
+        <div class="bottombar">
+            <div class="waves-count">
+                <span class="current-wave">0</span>/<span class="total-waves">0</span>
+            </div>
+            <div class="waves">
+                <div class="waves-content"></div>
+            </div>
+            <button class="start-button nav-button" data-action="next">Start</button>
+            <button class="next-button nav-button" data-action="next">Next</button>
+        </div>
+    </div>
+</body>
+</html>

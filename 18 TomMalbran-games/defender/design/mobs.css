@@ -1,0 +1,573 @@
+/**
+ * Monsters Design
+ */
+.mob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+    pointer-events: all;
+}
+.mob-death {
+    display: none;
+    position: absolute;
+    top: -0.1rem;
+    left: 0;
+    right: 0;
+    height: 0.2rem;
+    background-color: rgb(218, 48, 24);
+    border: 0.1rem solid black;
+    z-index: 1;
+}
+.mob-life {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.3rem;
+    height: 0.2rem;
+    background-color: green;
+}
+.mob-slow {
+    position: absolute;
+    display: none;
+    top: 0.7rem;
+    left: 0.7rem;
+    height: 0.1rem;
+    width: 0.1rem;
+    box-shadow: 0 0 0.3rem 0.6rem rgb(72, 125, 108);
+}
+.mob-bleed {
+    position: absolute;
+    display: none;
+    top: 0.7rem;
+    left: 0.7rem;
+    height: 0.1rem;
+    width: 0.1rem;
+    box-shadow: 0 0 0.3rem 0.6rem black;
+}
+.mob-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.hit      .mob-death,
+.slowed   .mob-slow,
+.bleeding .mob-bleed {
+    display: block;
+}
+
+
+
+/**
+ * Normal Mob
+ */
+.normal-mob {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(29, 29, 29);
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(220, 220, 220), rgb(120, 120, 120));
+}
+.normal-mob:after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(29, 29, 29, 0.7);
+    border-bottom: 0.2rem solid rgba(29, 29, 29, 0.7);
+}
+
+
+
+/**
+ * Inmune Mob
+ */
+.inmune-body {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(59, 0, 59);
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(230, 170, 250), rgb(180, 75, 248));
+}
+.inmune-body:after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(59, 0, 59, 0.7);
+    border-bottom: 0.2rem solid rgba(59, 0, 59, 0.7);
+}
+
+.inmune-line1,
+.inmune-line2,
+.inmune-line3,
+.inmune-line4 {
+    position: absolute;
+    top: 0.7rem;
+    left: -0.1rem;
+    width: 1.7rem;
+    height: 0.1rem;
+    background-color: rgb(59, 0, 59);
+}
+.inmune-line2 {
+    transform: rotate(45deg);
+}
+.inmune-line3 {
+    transform: rotate(90deg);
+}
+.inmune-line4 {
+    transform: rotate(135deg);
+}
+
+
+
+/**
+ * Group Mob
+ */
+.group-mob {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(0, 29, 59);
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(157, 174, 239), rgb(76, 76, 179));
+}
+.group-mob:after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(0, 29, 59, 0.7);
+    border-bottom: 0.2rem solid rgba(0, 29, 59, 0.7);
+}
+
+
+
+/**
+ * Fast Mob
+ */
+.fast-head {
+    position: absolute;
+    top: 0.1rem;
+    left: 1rem;
+    width: 0.6rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(65, 9, 6);
+    border-left: none;
+    border-radius: 0 1rem 1rem 0;
+    background: radial-gradient(farthest-side at 0% 50%, rgb(255, 199, 202), rgb(180, 76, 105));
+}
+.fast-head:after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 0.2rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(65, 9, 6, 0.7);
+    border-bottom: 0.2rem solid rgba(65, 9, 6, 0.7);
+}
+
+.fast-tail {
+    position: absolute;
+    top: 0.1rem;
+    left: -0.4rem;
+    width: 1.4rem;
+    height: 1.3rem;
+    overflow: hidden;
+}
+.fast-tail:after {
+    content: "";
+    position: absolute;
+    top: -0.1rem;
+    left: 0.7rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 0.1rem solid rgb(65, 9, 6);
+    background: radial-gradient(closest-corner, rgb(255, 199, 202), rgb(180, 76, 105));
+    transform: rotate(135deg) skew(20deg, 20deg);
+}
+
+
+
+/**
+ * Spawn Mob
+ */
+.spawn-head,
+.spawn-tail {
+    position: absolute;
+    width: 1rem;
+    height: 1.3rem;
+    overflow: hidden;
+}
+.spawn-head {
+    top: 0;
+    left: 0.7rem;
+}
+.spawn-tail {
+    top: 0;
+    left: -0.3rem;
+}
+
+.spawn-head:after {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 0.6rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(28, 38, 9, 0.7);
+    border-bottom: 0.2rem solid rgba(28, 38, 9, 0.7);
+}
+.spawn-head:before,
+.spawn-tail:before {
+    content: "";
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(28, 38, 9);
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(184, 246, 184), rgb(31, 142, 30));
+}
+.spawn-head:before {
+    left: -0.3rem;
+}
+
+
+.spawn-child {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(28, 38, 9);
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(184, 246, 184), rgb(31, 142, 30));
+}
+.spawn-child:after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(28, 38, 9, 0.7);
+    border-bottom: 0.2rem solid rgba(28, 38, 9, 0.7);
+}
+
+
+
+/**
+ * Flying Mob
+ */
+.flying-mob {
+    position: absolute;
+    top: 0.2rem;
+    left: -0.1rem;
+    width: 1.6rem;
+    height: 1.3rem;
+    border-left: 0.1rem solid black;
+    overflow: hidden;
+    z-index: 2;
+}
+.flying-mob:after {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 0.7rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(0, 0, 0, 0.7);
+    border-bottom: 0.2rem solid rgba(0, 0, 0, 0.7);
+}
+.flying-mob:before {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    left: -1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 0.1rem solid black;
+    background: linear-gradient(45deg, rgb(236, 228, 155), rgb(231, 227, 157) 35%, rgb(192, 169, 46) 65%, rgb(206, 188, 66));
+    transform: rotate(135deg) skew(24deg, 24deg);
+}
+
+.flying-shadow {
+    position: absolute;
+    top: 0.6rem;
+    left: -0.4rem;
+    width: 1.6rem;
+    height: 1.3rem;
+    overflow: hidden;
+    z-index: 1;
+}
+.flying-shadow:before {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    left: -1rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    background: rgba(0, 0, 0, 0.3);
+    transform: rotate(135deg) skew(24deg, 24deg);
+}
+
+
+
+/**
+ * Arrow Mob
+ */
+.arrow-head {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 0.7rem;
+    height: 1.5rem;
+    overflow: hidden;
+}
+.arrow-head:after {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.2rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(89, 11, 11, 0.7);
+    border-bottom: 0.2rem solid rgba(89, 11, 11, 0.7);
+}
+.arrow-head:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 0.1rem solid rgb(89, 11, 11);
+    background: radial-gradient(farthest-side, rgb(232, 176, 176), rgb(195, 60, 60));
+    transform: rotate(135deg);
+}
+
+.arrow-tail {
+    position: absolute;
+    top: 0.1rem;
+    left: -0.4rem;
+    width: 1.4rem;
+    height: 1.3rem;
+    overflow: hidden;
+}
+.arrow-tail:after {
+    content: "";
+    position: absolute;
+    top: -0.1rem;
+    left: 0.7rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 0.1rem solid rgb(89, 11, 11);
+    background: radial-gradient(closest-corner, rgb(231, 177, 177), rgb(195, 60, 60));
+    transform: rotate(135deg) skew(20deg, 20deg);
+}
+
+
+
+/**
+ * Dark Mob
+ */
+.dark-head {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.5rem;
+    width: 1rem;
+    height: 1.3rem;
+    overflow: hidden;
+}
+.dark-head:after {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(154, 154, 154, 0.7);
+    border-bottom: 0.2rem solid rgba(154, 154, 154, 0.7);
+}
+.dark-head:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.3rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(40,40,40);
+    border-radius: 50%;
+    background: radial-gradient(farthest-side at 30% 50%, rgb(100, 100, 100), rgb(30, 30, 30));
+}
+
+.dark-tail {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.2rem;
+    height: 1.1rem;
+    width: 0.5rem;
+    overflow: hidden;
+}
+.dark-tail:after {
+    content: "";
+    top: 0.1rem;
+    left: -0.9rem;
+    position: absolute;
+    height: 0.9rem;
+    width: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 0.3rem rgb(40, 40, 40);
+}
+
+
+
+/**
+ * Decoy Mob
+ */
+.decoy-head {
+    position: absolute;
+    top: 0;
+    left: 0.9rem;
+    height: 1.3rem;
+    width: 0.7rem;
+    border: 0.1rem solid rgb(63, 81, 59);
+    border-left: none;
+    border-radius: 0 1rem 1rem 0;
+    background-color: rgb(141, 171, 135);
+}
+.decoy-head:after {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(63, 81, 59, 0.7);
+    border-bottom: 0.2rem solid rgba(63, 81, 59, 0.7);
+}
+
+.decoy-body {
+    position: absolute;
+    top: -0.3rem;
+    left: 0.3rem;
+    height: 1.9rem;
+    width: 0.8rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(63, 81, 59);
+    border-right: none;
+    background: radial-gradient(rgb(227, 234, 225), rgb(113, 150, 105));
+}
+.decoy-body:before,
+.decoy-body:after {
+    content: "";
+    position: absolute;
+    left: -0.7rem;
+    width: 0.7rem;
+    height: 0.5rem;
+    border: 0.1rem solid rgb(63, 81, 59);
+    border-right: none;
+    background-color: rgb(170, 192, 165);
+}
+.decoy-body:before {
+    top: 0.2rem;
+    transform: skew(20deg, 20deg);
+}
+.decoy-body:after {
+    top: 1rem;
+    transform: skew(-20deg, -20deg);
+}
+
+
+.decoy-child {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 0.1rem solid rgb(63, 81, 59);
+    border-radius: 1rem;
+    background: radial-gradient(closest-side, rgb(227, 234, 225), rgb(113, 150, 105));
+}
+.decoy-child:after {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.6rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(63, 81, 59, 0.7);
+    border-bottom: 0.2rem solid rgba(63, 81, 59, 0.7);
+}
+
+
+
+/**
+ * Hopper Mob
+ */
+.hopper-mob {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.1rem solid rgb(92, 19, 83);
+    border-radius: 1rem;
+    background: radial-gradient(closest-side, rgb(237, 196, 237), rgb(207, 99, 207));
+}
+.hopper-mob:after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-top: 0.2rem solid rgba(92, 19, 83, 0.7);
+    border-bottom: 0.2rem solid rgba(92, 19, 83, 0.7);
+}
+
+
+
+/**
+ * Mob Alerts
+ */
+.alert {
+    position: absolute;
+    width: 1.5rem;
+    height: 1rem;
+    margin-top: -0.5rem;
+    margin-left: -0.5rem;
+    text-align: center;
+    font-weight: bold;
+    z-index: 3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-shadow: -0.1rem -0.1rem 0 black, 0.1rem -0.1rem 0 black, -0.1rem 0.1rem 0 black, 0.1rem 0.1rem 0 black;
+}
+.alert-red {
+    color: rgb(153, 0, 0);
+}
+.alert-yellow {
+    color: rgb(255, 255, 0);
+}

@@ -44,6 +44,16 @@
 
 15. [Ukioo/3D-aircraft](https://github.com/ukioo/3d-aircraft)  
 
+16. [cwackerfuss/react-wordle](https://github.com/cwackerfuss/react-wordle/)  
+
+17. [iamkun/tower_game](https://github.com/iamkun/tower_game)  
+
+18. [TomMalbran/games](https://github.com/TomMalbran/games/)  
+
+19. [techwithtim/Snake-Game](https://github.com/techwithtim/Snake-Game/)  
+
+20. [estevaofon/angry-birds-python](https://github.com/estevaofon/angry-birds-python/)  
+
 ## 郑重声明
 
 如有进行游戏期间对电脑或其他造成损伤，作者**不负任何责任**。游戏在加入后**不会再进行新版本的拉取**，如需最新版，请*访问上述链接*。
