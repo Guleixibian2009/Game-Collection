@@ -14,3 +14,4 @@ You can also run Snake-Game in Gitpod, a free online dev environment for GitHub:
 If you're intersted in a paid subscription with GitPod use the coupon code: **TECHWITHTIM19**
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/techwithtim/Snake-Game/blob/master/snake.py)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/techwithtim/Snake-Game/blob/master/snake.py)
